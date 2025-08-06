@@ -1,3 +1,32 @@
 @startuml tokopedia-order-history
 
+entity Orders{
+    * id            VARCHAR(100) <<PK>>
+    * created_at    TIMESTAMP
+    --
+    * seller_id     VARCHAR(100)
+    * seller_name   VARCHAR(100)
+    --
+    * buyer_id      VARCHAR(100)
+    * buyer_name    VARCHAR(100)
+    --
+    * shipping_name     VARCHAR(100)
+    * shipping_address  VARCHAR(500)
+    * shipping_phone    VARCHAR(25)
+    --
+    * logistic_id       VARCHAR(100)
+    * logistic_name     VARCHAR(100)
+    --
+    * payment_method_id     VARCHAR(100)
+    * payment_method_name   VARCHAR(100)
+    --
+    * total_quantity        INT
+    * total_weight          INT
+    * total_product_amount  BIGINT
+    * total_shipping_cost   BIGINT
+    * total_shopping_amount BIGINT
+    * service_charge        BIGINT
+    * total_amount          BIGINT
+}
+
 @enduml
