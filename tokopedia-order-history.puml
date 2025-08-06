@@ -42,4 +42,6 @@ entity OrderDetails {
     * total_amount  BIGINT
 }
 
+Orders ||--o{ OrderDetails : Has
+
 @enduml
