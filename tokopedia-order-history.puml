@@ -29,4 +29,17 @@ entity Orders{
     * total_amount          BIGINT
 }
 
+entity OrderDetails {
+    * id            VARCHAR(100) <<PK>>
+    * order_id      VARCHAR(100) <<FK>>
+    --
+    * product_id        VARCHAR(100)
+    * product_name      VARCHAR(250)
+    * product_weight    INT
+    * product_price     BIGINT
+    --
+    * quantity      INT
+    * total_amount  BIGINT
+}
+
 @enduml
