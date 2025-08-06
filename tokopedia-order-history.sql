@@ -62,3 +62,15 @@ INSERT INTO orderdetails(id, order_id, product_id, product_name, product_weight,
 VALUES ('4', '122', 'p4', 'Pompa Bola', 198, 43900, 1, 43900);
 
 SELECT * FROM orderdetails;
+
+
+# 2x Query
+# Order id = '122'
+SELECT * FROM orders WHERE id = '122';
+SELECT * FROM orderdetails WHERE order_id = '122';
+
+# 1x Query
+SELECT * FROM orders as o 
+JOIN orderdetails as od
+ON o.id = od.order_id
+WHERE o.id = '122';
