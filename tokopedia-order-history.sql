@@ -28,3 +28,19 @@ CREATE TABLE orders (
 )engine= InnoDB;
 
 SHOW TABLES;
+
+
+CREATE TABLE OrderDetails(
+    id                  VARCHAR(100) PRIMARY KEY,
+    order_id            VARCHAR(100) NOT NULL,
+    product_id          VARCHAR(100) NOT NULL,
+    product_name        VARCHAR(250) NOT NULL,
+    product_weight      INT NOT NULL,
+    product_price       BIGINT NOT NULL,
+    quantity            INT NOT NULL,
+    total_amount        BIGINT NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(id)
+)ENGINE = InnoDB;
+
+SHOW TABLES;
+DESC OrderDetails;
